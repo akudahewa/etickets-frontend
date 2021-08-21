@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Home from './Views/home';
 import Movies from './Views/movies';
+import MovieSingle from './Views/movieDetails';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/movies" component={Movies} />
+        <Route path="/moviedetails" component={MovieSingle} />
         <Route component={Error} />
       </Switch>
       </Router>

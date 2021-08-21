@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import MovieCard from '../Components/movieCard';
 import EventCard from '../Components/eventCardComponent';
 import Grid from '@material-ui/core/Grid';
+import HeroSection from '../Components/homaPageBanner';
 
 export default function Home() {
     const classes = useStyles();
@@ -15,7 +16,8 @@ export default function Home() {
 
         <div className={classes.root}>
             <AppBar />
-            <img className={classes.media} src={MovieBanner} alt='Main Banner' />
+            {/* <img className={classes.media} src={MovieBanner} alt='Main Banner' /> */}
+            <HeroSection />
             <Container>
             <div className={classes.subHeader}>
                 <Typography  variant="button">

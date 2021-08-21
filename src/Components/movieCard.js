@@ -1,5 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -13,6 +20,10 @@ const useStyles = makeStyles({
     root: {
         maxWidth: 345,
     },
+    Links:{
+        textDecoration:'none',
+        
+    }
 });
 
 export default function MovieCardComponent() {
@@ -44,9 +55,10 @@ export default function MovieCardComponent() {
                     <Button size="small" color="primary">
                         Share
                     </Button>
-                    <Button size="small" color="primary">
+                    <Link className={classes.Links} to="/moviedetails"> <Button size="small" color="primary">
                         Details
                     </Button>
+                    </Link>
                 </CardActions>
             </Card>
         </Grid>
